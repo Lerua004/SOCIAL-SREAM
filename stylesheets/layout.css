@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+}
+
+.Black {
+  background-color: black;
+  height: 54vw;
+  width: 100vw;
+}
+
+.SS {
+  width: 53vw;
+  height: 23vw;
+  padding-top: 16vw;
+  margin-left: 23vw;
+  text-align: center;
+  color: white;
+  font-size: 10vw;
+  font-family: "RubikWetPaint";
+  font-weight: 400;
+}
