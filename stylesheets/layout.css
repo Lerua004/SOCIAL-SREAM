@@ -1,24 +1,490 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
 }
+
 body {
-  width: 100vw;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
 
-.Black {
+.first-section {
+  position: relative; /* Чтобы элементы позиционировались внутри секции */
   background-color: black;
-  height: 54vw;
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  height: 100vh;
+  z-index: 10;
 }
 
-.SS {
-  width: 53vw;
-  height: 23vw;
-  padding-top: 16vw;
-  margin-left: 23vw;
-  text-align: center;
+/* Задний фон */
+.first-block {
+  position: absolute; /* Задний фон на весь экран */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/Setka/setka.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  z-index: 4; /* Самый низкий уровень */
+  animation: fadeInOut 5s;
+}
+
+
+/* Текст */
+.social-scream {
   color: white;
   font-size: 10vw;
-  font-family: "RubikWetPaint";
-  font-weight: 400;
+  font-family: "RubikWetPaint", sans-serif;
+  text-align: center;
+  z-index: 3; /* Самый верхний уровень */
+  position: relative; /* Относительно потока */
+  overflow-x: visible;
+}
+
+.second-section {
+  background-color: #AA0404;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  z-index: 1;
+  overflow: visible; /* Разрешаем элементам заходить внутрь */
+}
+
+.catched-grid {
+  text-transform: lowercase;
+  color: black;
+  font-size: 5vw;
+  font-family: "RubikWetPaint", sans-serif;
+  position: relative;
+  z-index: 2;
+  margin-top: 10vh;
+  overflow-x: visible;
+
+}
+
+.animated-word {
+  display: inline-block;
+  animation: fontCycle 2s infinite; /* Цикличная анимация каждые 2 секунды */
+  position: relative;
+  overflow-x: visible;
+
+}
+
+/* Оптимизация плавности смены */
+.animated-word {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.setka-grid {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.person-image {
+  z-index: 3;
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+  margin-top: 10rem;
+}
+
+/* Анимация сетки */
+.animation-setka {
+  position: absolute;
+  /* width: 100vw; */
+  height: 103vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible; /* Изображения могут выходить за границы */
+  z-index: 15; /* Высокий уровень, чтобы перекрывать другие элементы */
+}
+
+.frame {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: fadeFrames 0.5s; /* Общая длительность 5 кадров * 0.5s */
+  max-width: 168vh;
+  z-index: 15; /* Перекрывает элементы второго сектора */
+}
+
+
+.third-section {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}
+
+.hover-points {
+  background-color: white;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрирование текста */
+  flex-direction: column;
+  overflow-x: visible;
+
+}
+
+/* Основной стиль для текста */
+.lines {
+  font-size: clamp(7vw, 8.5vw, 12.2vw); /* Минимум 8.5vw, максимум 12.2vw */
+  letter-spacing: -1.2vw; /* Уменьшение расстояния между символами */
+  text-align: center;
+  line-height: 0.8; /* Меньшее расстояние между строками */
+  position: relative;
+  overflow-x: visible;
+
+}
+
+/* Стили тире */
+.dash {
+  display: inline-block;
+  transition: opacity 0.3s ease; /* Плавные переходы */
+  color: black;
+  font-size: 1em;
+  position: relative;
+  overflow-x: visible;
+
+}
+
+/* Точка */
+.point {
+  font-size: 1.2em;
+  display: inline-block;
+  color: black;
+  overflow-x: visible;
+
+}
+
+/* Текст вместо тире при наведении */
+.dot {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow-x: visible;
+
+}
+
+.dot:hover .dash {
+  opacity: 0; /* Скрываем тире */
+}
+
+.dot:hover::before {
+  content: attr(data-word); /* Показываем слово */
+  font-size: 0.4em; /* Размер текста слова */
+  color: #AA0404; /* Цвет текста */
+  position: absolute;
+  white-space: nowrap;
+  left: 0; /* Начинаем слева */
+  right: 0; /* Конец справа */
+  top: 50%; /* Выравниваем текст по вертикали */
+  transform: translateY(-10%); /* Центрирование текста */
+  text-align: center;
+  z-index: 1; /* Ставим текст поверх */
+  letter-spacing: 0.3vw;
+  overflow-x: visible;
+
+}
+
+/* Пустой data-word */
+.dot[data-word=""]::before {
+  content: ""; /* Не отображаем текст */
+}
+
+.hearts {
+  background-color: black;
+  width: 50vw;
+  height: 90vh;
+  position: relative; /* Блок для абсолютного позиционирования */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Центрируем текст */
+  color: white;
+  overflow: hidden; /* Скроем всё, что выходит за пределы блока */
+}
+
+.hearts {
+  font-size: clamp(1.5rem, 2vw, 3rem); /* Адаптивный размер текста */
+  text-align: center;
+  z-index: 2; /* Текст находится поверх сердечек */
+  position: relative;
+}
+
+/* Сердечки */
+.heart {
+  position: absolute;
+  width: var(--size, 8%);
+  transform: translate(-50%, -50%) rotate(var(--angle, 0deg));
+  top: var(--y, 50%);
+  left: var(--x, 50%);
+  animation: jitter 0.3s infinite; /* Анимация дёргания */
+  transition: transform 0.3s ease-out; /* Плавность остановки */
+}
+
+
+/* Центральное изображение */
+.chat {
+  position: relative;
+  z-index: 10;
+  width: 20%;
+  transition: transform 0.3s, opacity 0.3s, background-image 0.3s; /* Плавная смена */
+}
+
+/* Замена изображения при наведении */
+.chat:hover {
+  content: url("../images/chat_hovered.png"); /* Замена изображения */
+  transform: scale(1.1); /* Небольшое увеличение */
+}
+
+/* Остановка анимации сердечек при наведении на .chat */
+.chat:hover ~ .heart {
+  animation: none !important;
+}
+
+
+
+.fourth-section {
+  background-color: #AA0404;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* Скрываем выходящий за пределы текст */
+}
+
+
+.do-not-disturb {
+  color: black;
+  font-size: 3.5vw;
+  font-family: "RubikWetPaint", sans-serif;
+  white-space: nowrap; /* Не переносим текст */
+  position: relative;
+  animation: smooth-scroll 7s linear infinite; /* Бесконечная плавная анимация */
+  overflow-x: visible;
+}
+
+
+.fifth-section {
+  background-color: black; /* Контрастный фон */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden; /* Скрываем излишки */
+}
+
+.glitch-image {
+  width: 100vw;
+  height: 100vh; /* Пропорциональный размер изображения */
+  animation: glitch-animation 0.2s steps(1) infinite; /* Быстрое переключение */
+  overflow-x: visible;
+
+}
+
+
+.sixth-section {
+  background-color: black;
+  display: flex
+;
+  overflow: hidden;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 5vh;
+  align-content: center;
+
+
+}
+
+.rose-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 5vw;
+  overflow-x: visible;
+
+}
+
+/* Розы на переднем плане */
+.rose {
+  position: relative; /* Относительное позиционирование для z-index */
+  z-index: 2; /* Розы выше текста */
+  transition: transform 0.5s ease; /* Эффект увеличения розы при наведении */
+  /* width: 30vw; */
+}
+
+/* Текст на заднем плане */
+.text-overlay {
+  width: 38vw;
+  height: 85vh;
+  position: absolute; /* Абсолютное позиционирование для текста */
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Центрирование текста */
+  opacity: 0; /* Полностью прозрачный текст */
+  pointer-events: none; /* Текст не мешает взаимодействию с изображением */
+  z-index: 1; /* Текст под розой */
+  transition: opacity 1.5s ease; /* Плавное появление текста */
+}
+
+/* Эффект при наведении */
+.rose-container:hover .text-overlay {
+  opacity: 1; /* Делаем текст видимым */
+}
+
+.arrows-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+
+  /* gap: 2vw; */
+}
+
+.red-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 15vw;
+  background-color: #AA0404;
+  padding: 1vw;
+  height: 85vh;
+  overflow-x: visible;
+  
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 70vh; */
+}
+
+.white-container, .black-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+  height: 28vh;
+  background-color: white;
+  padding: 1vw;
+}
+
+.black-container {
+  background-color: black;
+}
+
+.arrow-red, .arrow-black, .arrow-white {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  margin: 0.5vw;
+
+}
+
+.arrow-black:hover {
+  transform: rotate(-180deg) translateY(-20px);
+}
+
+.arrow-red:hover {
+  animation: spin 1s linear infinite;
+}
+
+.arrow-white:hover {
+  transform: rotate(180deg) translateY(20px);
+}
+
+.seventh-section {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Выравниваем изображения по нижнему краю */
+  padding-bottom: 3vh;
+  height: 35vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.design-school {
+  margin-left: 3vw;
+}
+
+/* Обёртка для полосы и текста */
+.line-wrapper {
+  display: flex;
+  flex-direction: column; /* Текст над полосой */
+  align-items: center;
+  justify-content: flex-end; /* Выравниваем полосу по низу */
+  flex-grow: 1; /* Заполняет пространство между изображениями */
+  align-self: flex-end; /* Расположить обёртку по низу */
+  position: relative;
+  transition: transform 0.6s ease-in-out; /* Плавный переход для движения */
+  overflow-x: visible;
+
+}
+
+/* Надпись над линией */
+.line-text {
+  font-family: "PoiretOne";
+  color: #AA0404;
+  font-weight:500;
+  font-size: 4.5vw;
+  margin-bottom: 0.7vh; /* Расстояние от текста до полосы */
+  overflow-x: visible;
+
+}
+
+/* Красная полоса */
+.connecting-line {
+  height: 4px; /* Толщина полосы */
+  background-color: #AA0404; /* Красный цвет полосы */
+  width: 100%; /* Полоса растягивается на ширину обёртки */
+  border: 1.5px solid #550202; /* Рамка вокруг полосы */
+  box-sizing: border-box; /* Учитываем рамку в размерах */
+  transform: scaleX(1); /* Исходное состояние */
+  transform-origin: left; /* Увеличиваем ширину линии справа налево */
+  transition: transform 0.6s ease-in-out; /* Плавный переход */
+  overflow-x: visible;
+
+}
+
+.hand-mobile {
+  display: none;
+  /* display: inline-block; */
+  transition: transform 0.6s ease-in-out; /* Плавный переход для перемещения */
+  transform-origin: center; /* Устанавливаем точку вращения/масштабирования */
+  cursor: pointer; /* Указатель мыши при наведении */
+  overflow-x: visible;
+
+}
+
+.hand {
+  /* display: inline-block; */
+  transition: transform 0.6s ease-in-out; /* Плавный переход для перемещения */
+  transform-origin: center; /* Устанавливаем точку вращения/масштабирования */
+  cursor: pointer; /* Указатель мыши при наведении */
+  overflow-x: visible;
+
+}
+
+/* Линия при наведении */
+.hand:hover {
+  transform: translateX(30px); /* Растягиваем линию вправо */
 }

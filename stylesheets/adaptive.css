@@ -1,0 +1,285 @@
+
+/* Медиазапросы для адаптации */
+@media (max-width: 768px) {
+    .social-scream {
+        font-size: 14vw;
+    }
+
+    .catched-grid {
+        font-size: 6vw;
+    }
+    
+    .animation-setka {
+      width: 171vw;
+      height: 48vh;
+    }
+
+    .frame {
+        left: 0;
+        max-width: 175vw;
+    }
+
+    .first-section,
+    .second-section {
+        height: 50vh;
+    }
+
+    .hearts, .fourth-section {
+        height: 30vh;
+    }
+
+    .hover-points {
+        width: 90vw; /* Увеличиваем ширину контейнера */
+        padding: 15px;
+      }
+    
+      .lines {
+        font-size: clamp(5vw, 7vw, 9vw); /* Регулируем размер текста */
+        letter-spacing: -0.5vw; /* Уменьшаем расстояние */
+        line-height: 1.2; /* Пространство между строками */
+      }
+    
+      .dash {
+        font-size: 0.9em; /* Уменьшаем размер тире */
+      }
+    
+      .point {
+        font-size: 1em; /* Уменьшаем размер точек */
+      }
+    
+      .dot:hover::before {
+        font-size: 0.6em; /* Уменьшаем текст при наведении */
+        letter-spacing: 0.05vw;
+      }
+
+      .hearts {
+        width: 100vw; /* Полная ширина экрана */
+        height: 70vh; /* Уменьшаем высоту */
+      }
+    
+      .heart {
+        width: calc(var(--size, 6%) * 0.8); /* Уменьшаем размеры сердечек */
+      }
+    
+      .chat {
+        width: 12%; /* Уменьшаем размер чата */
+      }
+
+      .fourth-section {
+        height: 12vh; /* Увеличиваем высоту для мобильных */
+      }
+    
+      .do-not-disturb {
+        font-size: clamp(5vw, 6vw, 7vw); /* Увеличиваем текст для лучшей читаемости */
+      }
+
+      .fifth-section {
+        height: 100vh; /* Уменьшение высоты секции на планшетах */
+      }
+
+      .glitch-image {
+        width: 150vw;
+      }
+
+      .sixth-section {
+        flex-direction: column; /* Меняем направление секции на вертикальное */
+        /* padding-top: 24vh; */
+        height: 100vh;
+      }
+    
+      .rose-container {
+        margin-left: 0;
+        margin-bottom: 5vw; /* Увеличиваем отступ снизу для мобильных */
+      }
+    
+      .rose {
+        width: 75vw; /* Еще больше увеличиваем розу для самых маленьких экранов */
+      }
+          
+      .text-overlay {
+        width: 90vw;
+        top: 55%;
+        height: 40vh;
+      }
+    
+     .red-container {
+      width: 40vw;
+     }
+
+     .white-container, .black-container {
+      width: 60vw;
+     }
+
+    .seventh-section {
+        flex-direction: row; /* Возвращаем горизонтальное расположение */
+        justify-content: space-between; /* Равномерное распределение */
+        height: 15vh;
+        gap: 0; /* Убираем промежутки между элементами */
+      }
+    
+      .design-school {
+        width: 45%;
+        margin-left: 2.5vw;
+        margin-bottom: 0;
+      }
+    
+      .line-wrapper {
+        flex-grow: 1; /* Занимает оставшееся пространство */
+        align-self: flex-end;
+        width: auto;
+      }
+    
+      .line-text {
+        font-size: 6.5vw;
+        margin-bottom: 0.7vh;
+      }
+    
+      .hand {
+        width: 30%;
+        transform: none; /* Убираем трансформации */
+      }
+    
+      .hand:hover {
+        transform: translateX(30px);
+      }
+      .connecting-line {
+        height: 1.5px;
+        border: 0.5px solid #550202;
+      }
+}
+
+@media (max-width: 480px) {
+    .social-scream {
+        font-size: 16vw;
+    }
+
+    .catched-grid {
+        font-size: 9vw;
+    }
+
+    .animation-setka {
+      height: 50vh;
+    }
+
+    .first-section,
+    .second-section {
+        height: 50vh;
+    }
+
+    /* Стили для маленьких экранов */
+    .third-section {
+        flex-direction: column;
+        height: 100vh;
+    }
+    .hover-points {
+        width: 100vw; /* Максимальная ширина */
+        padding: 10px;
+      }
+    
+      .lines {
+        font-size: clamp(12vw, 14vw, 18vw); /* Еще меньший текст */
+        line-height: 1.5; /* Больше пространства между строками */
+      }
+    
+      .dot:hover::before {
+        font-size: 0.5em; /* Меньший текст при наведении */
+      }
+
+      .hearts {
+        height: 60vh; /* Еще меньше высота */
+      }
+    
+      .heart {
+        width: calc(var(--size, 6%) * 0.9); /* Еще меньше сердечки */
+      }
+    
+      .chat {
+        width: 20%; /* Уменьшаем центральное изображение */
+      }
+
+      .fourth-section {
+        height: 15vh; /* Еще больше высота для маленьких экранов */
+      }
+    
+      .do-not-disturb {
+        font-size: clamp(6vw, 7vw, 8vw); /* Увеличиваем текст для компактных экранов */
+        animation-duration: 10s; /* Замедляем анимацию для маленьких экранов */
+      }
+
+      .glitch-image {
+        width: 300vw;
+      }
+
+      .sixth-section {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .rose {
+        width: 75vw; /* Еще больше увеличиваем розу для самых маленьких экранов */
+      }
+
+      .red-container {
+        width: 40vw;
+        height: 55vh;
+      }
+
+      .white-container, .black-container {
+        height: 18vh;
+        width: 60vw;
+      }
+
+      .extra {
+        display: none;
+      }
+
+      .arrow-red, .arrow-black, .arrow-white {
+        width: 22vw;
+      }
+          
+      .text-overlay {
+        width: 90vw;
+        top: 45%;
+        height: 40vh;
+      }
+    
+      .design-school {
+        width: 65%;
+        margin-left: 2.5vw;
+        margin-bottom: 0;
+      }
+    
+      .line-wrapper {
+        display: none;
+      }
+    
+      .line-text {
+        font-size: 6.5vw;
+        margin-bottom: 0.7vh;
+      }
+    
+      .hand-mobile {
+        display: block;
+        width: 40%;
+        transform: none; /* Убираем трансформации */
+      }
+    
+      .hand-mobile:hover {
+        transform: translateX(30px);
+      }
+      .connecting-line {
+        height: 1.5px;
+        border: 0.5px solid #550202;
+      }
+      .hand  {
+        display: none;
+      }
+      
+      .seventh-section {
+        padding-bottom: 2vh;
+      }
+
+
+
+}

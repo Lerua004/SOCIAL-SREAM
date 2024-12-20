@@ -1,0 +1,145 @@
+/* Анимация плавного появления */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Полностью скрыто */
+  }
+  50% {
+    opacity: 1; /* Полностью видно */
+  }
+  100% {
+    opacity: 1; /* Снова скрыто */
+  }
+}
+
+.frame:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .frame:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .frame:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .frame:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  .frame:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  
+  .frame:nth-child(6) {
+    animation: fadeLastFrame 0.5s;
+    animation-delay: 0.5s; /* Показывается после остальных */
+    animation-fill-mode: forwards; /* Остаётся видимым после анимации */
+  }
+  
+  /* Анимация для всех кадров, кроме последнего */
+  @keyframes fadeFrames {
+    0% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0; /* Исчезновение */
+    }
+  }
+  
+  /* Анимация для последнего кадра */
+  @keyframes fadeLastFrame {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1; /* Остаётся видимым */
+    }
+  }
+  
+
+
+
+/* Анимация смены шрифта */
+@keyframes fontCycle {
+  0%, 20% {
+    font-family: "RubikWetPaint";
+    opacity: 1;
+    transform: scale(1);
+  }
+  20%, 40% {
+    font-family: "RubikDoodleShadow";
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  40%, 60% {
+    font-family: "InkFree";
+    opacity: 1;
+    transform: scale(1);
+  }
+  60%, 80% {
+    font-family: "OrelegaOne";
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  80%, 95% {
+    font-family: "RubikBrokenFax";
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Анимация "дёргания" */
+@keyframes jitter {
+  0% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translate(0, 0);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translate(-3px, 2px);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translate(2px, -3px);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(var(--angle)) translate(0, 0);
+  }
+}
+
+
+/* Анимация движения текста */
+@keyframes smooth-scroll {
+  0% {
+    transform: translateX(200%); /* Текст на исходной позиции */
+  }
+  100% {
+    transform: translateX(-200%); /* Текст полностью уходит за левый край */
+  }
+}
+
+/* Анимация смены изображений */
+@keyframes glitch-animation {
+  0% {
+    content: url('../images/Glitch/1.png'); /* Первое изображение */
+  }
+  50% {
+    content: url('../images/Glitch/1.2.png'); /* Второе изображение */
+  }
+  100% {
+    content: url('../images/Glitch/1.png'); /* Возвращение к первому изображению */
+  }
+}
+
+/* Ключевые кадры для анимации вращения по кругу */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

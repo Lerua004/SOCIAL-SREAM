@@ -4,3 +4,47 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "PoiretOne";
+  src: url("../fonts/PoiretOne-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ------------------- */
+
+@font-face {
+  font-family: BrushScriptOpti;
+  src: url("../fonts/BrushScriptOpti-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InkFree";
+  src: url("../fonts/Inkfree.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrelegaOne";
+  src: url("../fonts/OrelegaOne-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RubikBrokenFax";
+  src: url("../fonts/RubikBrokenFax-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RubikDoodleShadow";
+  src: url("../fonts/RubikDoodleShadow-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
