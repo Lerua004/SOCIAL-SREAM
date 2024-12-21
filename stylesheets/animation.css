@@ -12,79 +12,145 @@
 }
 
 .frame:nth-child(1) {
-    animation-delay: 0s;
-  }
-  
-  .frame:nth-child(2) {
-    animation-delay: 0.1s;
-  }
-  
-  .frame:nth-child(3) {
-    animation-delay: 0.2s;
-  }
-  
-  .frame:nth-child(4) {
-    animation-delay: 0.3s;
-  }
-  
-  .frame:nth-child(5) {
-    animation-delay: 0.4s;
-  }
-  
-  .frame:nth-child(6) {
-    animation: fadeLastFrame 0.5s;
-    animation-delay: 0.5s; /* Показывается после остальных */
-    animation-fill-mode: forwards; /* Остаётся видимым после анимации */
-  }
-  
-  /* Анимация для всех кадров, кроме последнего */
-  @keyframes fadeFrames {
-    0% {
-      opacity: 1;
-    }
-  
-    100% {
-      opacity: 0; /* Исчезновение */
-    }
-  }
-  
-  /* Анимация для последнего кадра */
-  @keyframes fadeLastFrame {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1; /* Остаётся видимым */
-    }
-  }
-  
+  animation-delay: 0s;
+}
 
+.frame:nth-child(2) {
+  animation-delay: 0.7s;
+}
 
+.frame:nth-child(3) {
+  animation-delay: 1.3s;
+}
+
+.frame:nth-child(4) {
+  animation-delay: 1.7s;
+}
+
+.frame:nth-child(5) {
+  animation-delay: 2.3s;
+}
+
+.frame:nth-child(6) {
+  animation: fadeLastFrame 2.5s;
+  animation-delay: 2.5s; /* Показывается после остальных */
+  animation-fill-mode: forwards; /* Остаётся видимым после анимации */
+}
+
+/* Анимация для всех кадров, кроме последнего */
+@keyframes fadeFrames {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0; /* Исчезновение */
+  }
+}
+
+/* Анимация для последнего кадра */
+@keyframes fadeLastFrame {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1; /* Остаётся видимым */
+  }
+}
+
+.red-frame:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.red-frame:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.red-frame:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.red-frame:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.red-frame:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.red-frame:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.red-frame:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.red-frame:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.red-frame:nth-child(9) {
+  animation-delay: 1.6s;
+}
+
+.red-frame:nth-child(10) {
+  animation: fadeLastRedFrame 1.8s;
+  animation-delay: 1.8s; /* Показывается после остальных */
+  animation-fill-mode: forwards; /* Остаётся видимым после анимации */
+}
+
+/* Анимация для всех кадров, кроме последнего */
+@keyframes fadeRedFrames {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0; /* Исчезновение */
+  }
+}
+
+/* Анимация для последнего кадра */
+@keyframes fadeLastRedFrame {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1; /* Остаётся видимым */
+  }
+}
 
 /* Анимация смены шрифта */
 @keyframes fontCycle {
-  0%, 20% {
+  0%,
+  20% {
     font-family: "RubikWetPaint";
     opacity: 1;
     transform: scale(1);
   }
-  20%, 40% {
+  20%,
+  40% {
     font-family: "RubikDoodleShadow";
     opacity: 1;
     transform: scale(1.1);
   }
-  40%, 60% {
+  40%,
+  60% {
     font-family: "InkFree";
     opacity: 1;
     transform: scale(1);
   }
-  60%, 80% {
+  60%,
+  80% {
     font-family: "OrelegaOne";
     opacity: 1;
     transform: scale(1.1);
   }
-  80%, 95% {
+  80%,
+  95% {
     font-family: "RubikBrokenFax";
     opacity: 1;
     transform: scale(1);
@@ -110,27 +176,26 @@
   }
 }
 
-
 /* Анимация движения текста */
 @keyframes smooth-scroll {
   0% {
-    transform: translateX(200%); /* Текст на исходной позиции */
+    transform: translateX(250%); /* Текст на исходной позиции */
   }
   100% {
-    transform: translateX(-200%); /* Текст полностью уходит за левый край */
+    transform: translateX(-120%); /* Текст полностью уходит за левый край */
   }
 }
 
 /* Анимация смены изображений */
 @keyframes glitch-animation {
   0% {
-    content: url('../images/Glitch/1.png'); /* Первое изображение */
+    content: url("../images/Glitch/1.png"); /* Первое изображение */
   }
   50% {
-    content: url('../images/Glitch/1.2.png'); /* Второе изображение */
+    content: url("../images/Glitch/1.2.png"); /* Второе изображение */
   }
   100% {
-    content: url('../images/Glitch/1.png'); /* Возвращение к первому изображению */
+    content: url("../images/Glitch/1.png"); /* Возвращение к первому изображению */
   }
 }
 
@@ -141,5 +206,36 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Анимация движения вправо */
+@keyframes moveArrowRight {
+  0% {
+    transform: translateX(-100%); /* Начальная позиция */
+  }
+  100% {
+    transform: translateX(100%); /* Возвращение в исходное положение */
+  }
+}
+
+/* Анимация движения стрелки вверх */
+@keyframes moveArrow {
+  0% {
+    transform: translateY(500%); /* Начальная позиция */
+  }
+
+  100% {
+    transform: translateY(-500%); /* Возвращается в исходное положение */
+  }
+}
+
+@keyframes moveHand {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(30px);
   }
 }

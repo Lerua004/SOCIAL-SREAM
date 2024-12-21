@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-
 }
 
 body {
@@ -31,13 +30,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/Setka/setka.png');
+  background-image: url("../images/Setka/setka.png");
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
   z-index: 4; /* Самый низкий уровень */
-  animation: fadeInOut 5s;
+  animation: fadeInOut 20s;
 }
-
 
 /* Текст */
 .social-scream {
@@ -51,7 +49,7 @@ body {
 }
 
 .second-section {
-  background-color: #AA0404;
+  background-color: #aa0404;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -73,15 +71,32 @@ body {
   z-index: 2;
   margin-top: 10vh;
   overflow-x: visible;
-
 }
 
+/* Контейнер для анимированного текста */
+.animated-word-container {
+  display: inline-block;
+  position: relative;
+  width: 5em; /* Задаем фиксированную ширину для "попался" */
+  height: 1em; /* Высота текста без изменений */
+  overflow: hidden; /* Скрываем любые выходящие элементы */
+  text-align: center; /* Центрируем слово */
+  vertical-align: middle;
+}
+
+/* Анимация слова */
 .animated-word {
   display: inline-block;
-  animation: fontCycle 2s infinite; /* Цикличная анимация каждые 2 секунды */
-  position: relative;
+  animation: fontCycle 0.3s infinite ease-in-out;
+  position: absolute; /* Убираем влияние на остальной текст */
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  transform-origin: center; /* Центрируем масштабирование */
+  text-align: center;
+  transition: transform 0.3s ease, font-size 0.3s ease;
   overflow-x: visible;
-
 }
 
 /* Оптимизация плавности смены */
@@ -94,7 +109,6 @@ body {
   height: 100vh;
   width: 100vw;
 }
-
 
 .person-image {
   z-index: 3;
@@ -116,15 +130,33 @@ body {
   z-index: 15; /* Высокий уровень, чтобы перекрывать другие элементы */
 }
 
+.animation-red-setka {
+  position: absolute;
+  height: 160vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  z-index: 15; /* Высокий уровень, чтобы перекрывать другие элементы */
+}
+
+.red-frame {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: fadeRedFrames 1.8s; /* Общая длительность 5 кадров * 0.5s */
+  max-width: 215vh;
+  z-index: 15; /* Перекрывает элементы второго сектора */
+}
+
 .frame {
   position: absolute;
   top: 0;
   opacity: 0;
-  animation: fadeFrames 0.5s; /* Общая длительность 5 кадров * 0.5s */
+  animation: fadeFrames 2.5s;
   max-width: 168vh;
   z-index: 15; /* Перекрывает элементы второго сектора */
 }
-
 
 .third-section {
   display: flex;
@@ -140,7 +172,6 @@ body {
   justify-content: center; /* Центрирование текста */
   flex-direction: column;
   overflow-x: visible;
-
 }
 
 /* Основной стиль для текста */
@@ -151,7 +182,6 @@ body {
   line-height: 0.8; /* Меньшее расстояние между строками */
   position: relative;
   overflow-x: visible;
-
 }
 
 /* Стили тире */
@@ -162,7 +192,6 @@ body {
   font-size: 1em;
   position: relative;
   overflow-x: visible;
-
 }
 
 /* Точка */
@@ -171,7 +200,6 @@ body {
   display: inline-block;
   color: black;
   overflow-x: visible;
-
 }
 
 /* Текст вместо тире при наведении */
@@ -180,7 +208,6 @@ body {
   display: inline-block;
   cursor: pointer;
   overflow-x: visible;
-
 }
 
 .dot:hover .dash {
@@ -190,7 +217,7 @@ body {
 .dot:hover::before {
   content: attr(data-word); /* Показываем слово */
   font-size: 0.4em; /* Размер текста слова */
-  color: #AA0404; /* Цвет текста */
+  color: #aa0404; /* Цвет текста */
   position: absolute;
   white-space: nowrap;
   left: 0; /* Начинаем слева */
@@ -201,7 +228,6 @@ body {
   z-index: 1; /* Ставим текст поверх */
   letter-spacing: 0.3vw;
   overflow-x: visible;
-
 }
 
 /* Пустой data-word */
@@ -239,7 +265,6 @@ body {
   transition: transform 0.3s ease-out; /* Плавность остановки */
 }
 
-
 /* Центральное изображение */
 .chat {
   position: relative;
@@ -259,16 +284,13 @@ body {
   animation: none !important;
 }
 
-
-
 .fourth-section {
-  background-color: #AA0404;
+  background-color: #aa0404;
   height: 10vh;
   display: flex;
   align-items: center;
   overflow: hidden; /* Скрываем выходящий за пределы текст */
 }
-
 
 .do-not-disturb {
   color: black;
@@ -276,10 +298,9 @@ body {
   font-family: "RubikWetPaint", sans-serif;
   white-space: nowrap; /* Не переносим текст */
   position: relative;
-  animation: smooth-scroll 7s linear infinite; /* Бесконечная плавная анимация */
+  animation: smooth-scroll 4s linear infinite; /* Бесконечная плавная анимация */
   overflow-x: visible;
 }
-
 
 .fifth-section {
   background-color: black; /* Контрастный фон */
@@ -295,22 +316,17 @@ body {
   height: 100vh; /* Пропорциональный размер изображения */
   animation: glitch-animation 0.2s steps(1) infinite; /* Быстрое переключение */
   overflow-x: visible;
-
 }
-
 
 .sixth-section {
   background-color: black;
-  display: flex
-;
+  display: flex;
   overflow: hidden;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   padding-top: 5vh;
   align-content: center;
-
-
 }
 
 .rose-container {
@@ -318,7 +334,6 @@ body {
   display: inline-block;
   margin-left: 5vw;
   overflow-x: visible;
-
 }
 
 /* Розы на переднем плане */
@@ -363,11 +378,11 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 15vw;
-  background-color: #AA0404;
+  background-color: #aa0404;
   padding: 1vw;
   height: 85vh;
-  overflow-x: visible;
-  
+  overflow: hidden; /* Скрываем выходящие элементы */
+  position: relative; /* Для анимации */
 }
 
 .vertical-container {
@@ -377,7 +392,8 @@ body {
   /* height: 70vh; */
 }
 
-.white-container, .black-container {
+.white-container,
+.black-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -390,25 +406,29 @@ body {
 
 .black-container {
   background-color: black;
+  overflow: hidden; /* Скрываем выходящие стрелки */
+  position: relative;
+  animation: moveArrowRight 2s infinite linear;
 }
 
-.arrow-red, .arrow-black, .arrow-white {
+.arrow-red,
+.arrow-black,
+.arrow-white {
   transition: transform 0.5s ease;
   cursor: pointer;
   margin: 0.5vw;
-
 }
 
-.arrow-black:hover {
-  transform: rotate(-180deg) translateY(-20px);
+.arrow-black {
+  animation: moveArrow 3s infinite linear; /* Анимация движения */
 }
 
-.arrow-red:hover {
+.arrow-white {
+  transform: rotate(90deg) translateY(20px);
+}
+
+.arrow-red {
   animation: spin 1s linear infinite;
-}
-
-.arrow-white:hover {
-  transform: rotate(180deg) translateY(20px);
 }
 
 .seventh-section {
@@ -437,24 +457,22 @@ body {
   position: relative;
   transition: transform 0.6s ease-in-out; /* Плавный переход для движения */
   overflow-x: visible;
-
 }
 
 /* Надпись над линией */
 .line-text {
   font-family: "PoiretOne";
-  color: #AA0404;
-  font-weight:500;
+  color: #aa0404;
+  font-weight: 500;
   font-size: 4.5vw;
   margin-bottom: 0.7vh; /* Расстояние от текста до полосы */
   overflow-x: visible;
-
 }
 
 /* Красная полоса */
 .connecting-line {
   height: 4px; /* Толщина полосы */
-  background-color: #AA0404; /* Красный цвет полосы */
+  background-color: #aa0404; /* Красный цвет полосы */
   width: 100%; /* Полоса растягивается на ширину обёртки */
   border: 1.5px solid #550202; /* Рамка вокруг полосы */
   box-sizing: border-box; /* Учитываем рамку в размерах */
@@ -462,7 +480,6 @@ body {
   transform-origin: left; /* Увеличиваем ширину линии справа налево */
   transition: transform 0.6s ease-in-out; /* Плавный переход */
   overflow-x: visible;
-
 }
 
 .hand-mobile {
@@ -472,7 +489,6 @@ body {
   transform-origin: center; /* Устанавливаем точку вращения/масштабирования */
   cursor: pointer; /* Указатель мыши при наведении */
   overflow-x: visible;
-
 }
 
 .hand {
@@ -481,7 +497,7 @@ body {
   transform-origin: center; /* Устанавливаем точку вращения/масштабирования */
   cursor: pointer; /* Указатель мыши при наведении */
   overflow-x: visible;
-
+  animation: moveHand 2s infinite linear alternate;
 }
 
 /* Линия при наведении */
