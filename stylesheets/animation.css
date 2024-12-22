@@ -1,20 +1,20 @@
 /* Анимация плавного появления */
 @keyframes fadeInOut {
   0% {
-    opacity: 0; /* Полностью скрыто */
+    opacity: 0;
   }
   50% {
-    opacity: 1; /* Полностью видно */
+    opacity: 1;
   }
   100% {
-    opacity: 1; /* Снова скрыто */
+    opacity: 1;
   }
 }
 
 .frame:nth-child(1) {
-    animation-delay: 0s;
-  }
-  
+  animation-delay: 0s;
+}
+
 .frame:nth-child(2) {
   animation-delay: 0.7s;
 }
@@ -33,10 +33,10 @@
 
 .frame:nth-child(6) {
   animation: fadeLastFrame 2.5s;
-  animation-delay: 2.5s; /* Показывается после остальных */
-  animation-fill-mode: forwards; /* Остаётся видимым после анимации */
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
 }
-  
+
 /* Анимация для всех кадров, кроме последнего */
 @keyframes fadeFrames {
   0% {
@@ -44,7 +44,7 @@
   }
 
   100% {
-    opacity: 0; /* Исчезновение */
+    opacity: 0;
   }
 }
 
@@ -55,29 +55,28 @@
   }
 
   100% {
-    opacity: 1; /* Остаётся видимым */
+    opacity: 1;
   }
 }
-  
 
 .red-frame:nth-child(1) {
   animation-delay: 0s;
 }
 
 .red-frame:nth-child(2) {
-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .red-frame:nth-child(3) {
-animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .red-frame:nth-child(4) {
-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .red-frame:nth-child(5) {
-animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 
 .red-frame:nth-child(6) {
@@ -95,58 +94,63 @@ animation-delay: 0.8s;
 .red-frame:nth-child(9) {
   animation-delay: 1.6s;
 }
-  
+
 .red-frame:nth-child(10) {
-animation: fadeLastRedFrame 1.8s;
-animation-delay: 1.8s; /* Показывается после остальных */
-animation-fill-mode: forwards; /* Остаётся видимым после анимации */
+  animation: fadeLastRedFrame 1.8s;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
 }
 
 /* Анимация для всех кадров, кроме последнего */
 @keyframes fadeRedFrames {
-0% {
-  opacity: 1;
-}
+  0% {
+    opacity: 1;
+  }
 
-100% {
-  opacity: 0; /* Исчезновение */
-}
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Анимация для последнего кадра */
 @keyframes fadeLastRedFrame {
-0% {
-  opacity: 0;
-}
+  0% {
+    opacity: 0;
+  }
 
-100% {
-  opacity: 1; /* Остаётся видимым */
-}
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Анимация смены шрифта */
 @keyframes fontCycle {
-  0%, 20% {
+  0%,
+  20% {
     font-family: "RubikWetPaint";
     opacity: 1;
     transform: scale(1);
   }
-  20%, 40% {
+  20%,
+  40% {
     font-family: "RubikDoodleShadow";
     opacity: 1;
     transform: scale(1.1);
   }
-  40%, 60% {
+  40%,
+  60% {
     font-family: "InkFree";
     opacity: 1;
     transform: scale(1);
   }
-  60%, 80% {
+  60%,
+  80% {
     font-family: "OrelegaOne";
     opacity: 1;
     transform: scale(1.1);
   }
-  80%, 95% {
+  80%,
+  95% {
     font-family: "RubikBrokenFax";
     opacity: 1;
     transform: scale(1);
@@ -172,15 +176,14 @@ animation-fill-mode: forwards; /* Остаётся видимым после а�
   }
 }
 
-
 /* Анимация движения текста */
 @keyframes scroll-left {
   0% {
-    transform: translateX(300%); /* Текст на исходной позиции */
+    transform: translateX(300%);
     visibility: visible;
   }
   100% {
-    transform: translateX(-300%); /* Текст полностью уходит за левый край */
+    transform: translateX(-300%);
     visibility: visible;
   }
 }
@@ -188,17 +191,17 @@ animation-fill-mode: forwards; /* Остаётся видимым после а�
 /* Анимация смены изображений */
 @keyframes glitch-animation {
   0% {
-    content: url('../images/Glitch/1.png'); /* Первое изображение */
+    content: url("../images/Glitch/1.png");
   }
   50% {
-    content: url('../images/Glitch/1.2.png'); /* Второе изображение */
+    content: url("../images/Glitch/1.2.png");
   }
   100% {
-    content: url('../images/Glitch/1.png'); /* Возвращение к первому изображению */
+    content: url("../images/Glitch/1.png");
   }
 }
 
-/* Ключевые кадры для анимации вращения по кругу */
+/* Ключ кадры для аним вращения по кругу */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -211,11 +214,11 @@ animation-fill-mode: forwards; /* Остаётся видимым после а�
 /* Анимация движения вправо */
 @keyframes moveArrowRight {
   0% {
-    transform: translateX(-400%); /* Начальная позиция */
+    transform: translateX(-400%);
     visibility: visible;
   }
   100% {
-    transform: translateX(400%); /* Возвращение в исходное положение */
+    transform: translateX(400%);
     visibility: visible;
   }
 }
@@ -223,12 +226,12 @@ animation-fill-mode: forwards; /* Остаётся видимым после а�
 /* Анимация движения стрелки вверх */
 @keyframes moveArrow {
   0% {
-    transform: translateY(500%); /* Начальная позиция */
+    transform: translateY(500%);
     visibility: visible;
   }
 
   100% {
-    transform: translateY(-500%); /* Возвращается в исходное положение */
+    transform: translateY(-500%);
     visibility: visible;
   }
 }
