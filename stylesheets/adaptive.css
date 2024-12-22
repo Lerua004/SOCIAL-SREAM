@@ -1,304 +1,341 @@
+
 /* Медиазапросы для адаптации */
 @media (max-width: 768px) {
-  .social-scream {
-    font-size: 14vw;
+  .first-block {
+    background-size: auto;
   }
 
-  .catched-grid {
-    font-size: 6vw;
-  }
+    .social-scream {
+        font-size: 14vw;
+    }
 
-  .animation-setka {
-    width: 171vw;
-    height: 48vh;
-  }
+    .catched-grid {
+        font-size: 6vw;
+    }
+    
+    .animation-setka {
+      width: 171vw;
+      height: 48vh;
+    }
 
-  .frame {
-    left: 0;
-    max-width: 175vw;
-  }
+    .frame {
+        left: 0;
+        max-width: 167vw;
+    }
 
-  .animation-red-setka {
-    width: 171vw;
-    height: 48vh;
-  }
+    .animation-red-setka {
+      width: 171vw;
+      height: 48vh;
+    }
 
-  .red-frame {
-    left: 0;
-    max-width: 175vw;
-  }
+    .red-frame {
+        left: 0;
+        max-width: 175vw;
+    }
 
-  .first-section,
-  .second-section {
-    height: 50vh;
-  }
+    .first-section,
+    .second-section {
+        height: 50vh;
+    }
 
-  .hearts,
-  .fourth-section {
-    height: 30vh;
-  }
+    .hearts, .fourth-section {
+        height: 30vh;
+    }
 
-  .hover-points {
-    width: 90vw; /* Увеличиваем ширину контейнера */
-    padding: 15px;
-  }
+    .hover-points {
+        width: 90vw; /* Увеличиваем ширину контейнера */
+        padding: 15px;
+      }
+    
+      .lines {
+        font-size: clamp(5vw, 7vw, 9vw); /* Регулируем размер текста */
+        letter-spacing: -0.5vw; /* Уменьшаем расстояние */
+        line-height: 1.2; /* Пространство между строками */
+      }
+    
+      .dash {
+        font-size: 0.9em; /* Уменьшаем размер тире */
+      }
+    
+      .point {
+        font-size: 1em; /* Уменьшаем размер точек */
+      }
+    
+      .dot:hover::before {
+        font-size: 0.6em; /* Уменьшаем текст при наведении */
+        letter-spacing: 0.05vw;
+      }
 
-  .lines {
-    font-size: clamp(5vw, 7vw, 9vw); /* Регулируем размер текста */
-    letter-spacing: -0.5vw; /* Уменьшаем расстояние */
-    line-height: 1.2; /* Пространство между строками */
-  }
+      .hearts {
+        width: 100vw; /* Полная ширина экрана */
+        height: 70vh; /* Уменьшаем высоту */
+      }
+    
+      .heart {
+        width: calc(var(--size, 6%) * 0.8); /* Уменьшаем размеры сердечек */
+        animation: none;
 
-  .dash {
-    font-size: 0.9em; /* Уменьшаем размер тире */
-  }
+      }
+    
+      .chat {
+        width: 12%; /* Уменьшаем размер чата */
+        content: url("../images/chat_hovered.png"); /* Замена изображения */
+        transform: scale(1.1); /* Небольшое увеличение */
+      }
 
-  .point {
-    font-size: 1em; /* Уменьшаем размер точек */
-  }
+      .fourth-section {
+        height: 12vh; /* Увеличиваем высоту для мобильных */
+      }
+    
+      .do-not-disturb {
+        font-size: clamp(5vw, 6vw, 7vw); /* Увеличиваем текст для лучшей читаемости */
+      }
 
-  .dot:hover::before {
-    font-size: 0.6em; /* Уменьшаем текст при наведении */
-    letter-spacing: 0.05vw;
-  }
+      .fifth-section {
+        height: 100vh; /* Уменьшение высоты секции на планшетах */
+      }
 
-  .hearts {
-    width: 100vw; /* Полная ширина экрана */
-    height: 70vh; /* Уменьшаем высоту */
-  }
+      .glitch-image {
+        width: 150vw;
+      }
 
-  .heart {
-    width: calc(var(--size, 6%) * 0.8); /* Уменьшаем размеры сердечек */
-  }
+      .sixth-section {
+        flex-direction: column; /* Меняем направление секции на вертикальное */
+        /* padding-top: 24vh; */
+        height: 100vh;
+      }
+    
+      .rose-container {
+        margin-left: 0;
+        margin-bottom: 5vw; /* Увеличиваем отступ снизу для мобильных */
+        margin-top: 5vh;
+      }
+    
+      .rose {
+        width: 75vw; /* Еще больше увеличиваем розу для самых маленьких экранов */
+      }
+          
+      .text-overlay {
+        width: 90vw;
+        top: 55%;
+        height: 40vh;
+        opacity: 1;
+      }
+    
+     .red-container {
+      width: 40vw;
+     }
 
-  .chat {
-    width: 12%; /* Уменьшаем размер чата */
-  }
+     .white-container, .black-container {
+      width: 60vw;
+     }
 
-  .fourth-section {
-    height: 12vh; /* Увеличиваем высоту для мобильных */
-  }
+    .seventh-section {
+        flex-direction: row; /* Возвращаем горизонтальное расположение */
+        justify-content: space-between; /* Равномерное распределение */
+        height: 15vh;
+        gap: 0; /* Убираем промежутки между элементами */
+      }
+    
+      .design-school {
+        width: 45%;
+        margin-left: 2.5vw;
+        margin-bottom: 0;
+      }
+    
+      .line-wrapper {
+        flex-grow: 1; /* Занимает оставшееся пространство */
+        align-self: flex-end;
+        width: auto;
+      }
+    
+      .line-text {
+        font-size: 6.5vw;
+        margin-bottom: 0.7vh;
+      }
+    
+      .hand {
+        width: 30%;
+        transform: none; /* Убираем трансформации */
+      }
+    
+      .hand:hover {
+        transform: translateX(30px);
+      }
+      .connecting-line {
+        height: 1.5px;
+        border: 0.5px solid #550202;
+      }
 
-  .do-not-disturb {
-    font-size: clamp(
-      5vw,
-      6vw,
-      7vw
-    ); /* Увеличиваем текст для лучшей читаемости */
-  }
+      .dash {
+        opacity: 0;
+      }
 
-  .fifth-section {
-    height: 100vh; /* Уменьшение высоты секции на планшетах */
-  }
+      /* Пустой data-word */
+      .dot[data-word=""] .dash {
+        opacity: 1;
+      }
 
-  .glitch-image {
-    width: 150vw;
-  }
+      .dot::before {
+        content: attr(data-word); /* Показываем слово */
+        font-size: 0.5em; /* Размер текста слова */
+        color: #AA0404; /* Цвет текста */
+        position: absolute;
+        white-space: nowrap;
+        left: 0; /* Начинаем слева */
+        right: 0; /* Конец справа */
+        top: 45%; /* Выравниваем текст по вертикали */
+        transform: translateY(-10%); /* Центрирование текста */
+        text-align: center;
+        z-index: 1; /* Ставим текст поверх */
+        letter-spacing: 0.3vw;
+        overflow-x: visible;
+      }
 
-  .sixth-section {
-    flex-direction: column; /* Меняем направление секции на вертикальное */
-    /* padding-top: 24vh; */
-    height: 100vh;
-  }
-
-  .rose-container {
-    margin-left: 0;
-    margin-bottom: 5vw; /* Увеличиваем отступ снизу для мобильных */
-  }
-
-  .rose {
-    width: 75vw; /* Еще больше увеличиваем розу для самых маленьких экранов */
-  }
-
-  .text-overlay {
-    width: 90vw;
-    top: 55%;
-    height: 40vh;
-  }
-
-  .red-container {
-    width: 40vw;
-  }
-
-  .white-container,
-  .black-container {
-    width: 60vw;
-  }
-
-  .seventh-section {
-    flex-direction: row; /* Возвращаем горизонтальное расположение */
-    justify-content: space-between; /* Равномерное распределение */
-    height: 15vh;
-    gap: 0; /* Убираем промежутки между элементами */
-  }
-
-  .design-school {
-    width: 45%;
-    margin-left: 2.5vw;
-    margin-bottom: 0;
-  }
-
-  .line-wrapper {
-    flex-grow: 1; /* Занимает оставшееся пространство */
-    align-self: flex-end;
-    width: auto;
-  }
-
-  .line-text {
-    font-size: 6.5vw;
-    margin-bottom: 0.7vh;
-  }
-
-  .hand {
-    width: 30%;
-    transform: none; /* Убираем трансформации */
-  }
-
-  .hand:hover {
-    transform: translateX(30px);
-  }
-  .connecting-line {
-    height: 1.5px;
-    border: 0.5px solid #550202;
-  }
 }
 
 @media (max-width: 480px) {
-  .social-scream {
-    font-size: 16vw;
-  }
+    .social-scream {
+        font-size: 16vw;
+    }
 
-  .catched-grid {
-    font-size: 9vw;
-  }
+    .catched-grid {
+        font-size: 9vw;
+    }
 
-  .animation-setka {
-    height: 50vh;
-  }
+    .animation-setka {
+      height: 50vh;
+    }
 
-  .first-section,
-  .second-section {
-    height: 50vh;
-  }
+    .first-section,
+    .second-section {
+        height: 50vh;
+    }
 
-  /* Стили для маленьких экранов */
-  .third-section {
-    flex-direction: column;
-    height: 100vh;
-  }
-  .hover-points {
-    width: 100vw; /* Максимальная ширина */
-    padding: 10px;
-  }
+    /* Стили для маленьких экранов */
+    .third-section {
+        flex-direction: column;
+        height: 100vh;
+    }
+    .hover-points {
+        width: 100vw; /* Максимальная ширина */
+        padding: 10px;
+      }
+    
+      .lines {
+        font-size: clamp(12vw, 14vw, 18vw); /* Еще меньший текст */
+        line-height: 1.5; /* Больше пространства между строками */
+      }
+    
+      .dot:hover::before {
+        font-size: 0.5em; /* Меньший текст при наведении */
+      }
 
-  .lines {
-    font-size: clamp(12vw, 14vw, 18vw); /* Еще меньший текст */
-    line-height: 1.5; /* Больше пространства между строками */
-  }
+      .hearts {
+        height: 60vh; /* Еще меньше высота */
+      }
+    
+      .heart {
+        width: calc(var(--size, 6%) * 0.9); /* Еще меньше сердечки */
+      }
+    
+      .chat {
+        width: 20%; /* Уменьшаем центральное изображение */
+      }
 
-  .dot:hover::before {
-    font-size: 0.5em; /* Меньший текст при наведении */
-  }
+      .fourth-section {
+        height: 15vh; /* Еще больше высота для маленьких экранов */
+      }
+    
+      .do-not-disturb {
+        font-size: clamp(11vw, 12vw, 8vw); /* Увеличиваем текст для компактных экранов */
+        animation: scroll-left 6s linear infinite; /* Анимация движения */
 
-  .hearts {
-    height: 60vh; /* Еще меньше высота */
-  }
+      }
+      
+      .do-not-disturb:nth-child(2) {
+        animation-delay: 2s; /* Задержка перед началом */
+      }
+      
+      .do-not-disturb:nth-child(3) {
+        animation-delay: 3s; /* Другая задержка */
+      }
+            
 
-  .heart {
-    width: calc(var(--size, 6%) * 0.9); /* Еще меньше сердечки */
-  }
+      .glitch-image {
+        width: 300vw;
+      }
 
-  .chat {
-    width: 20%; /* Уменьшаем центральное изображение */
-  }
+      .sixth-section {
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+      }
 
-  .fourth-section {
-    height: 15vh; /* Еще больше высота для маленьких экранов */
-  }
+      .rose {
+        width: 75vw; /* Еще больше увеличиваем розу для самых маленьких экранов */
+      }
 
-  .do-not-disturb {
-    font-size: clamp(
-      6vw,
-      7vw,
-      8vw
-    ); /* Увеличиваем текст для компактных экранов */
-    animation-duration: 10s; /* Замедляем анимацию для маленьких экранов */
-  }
+      .red-container {
+        width: 40vw;
+        height: 100vh;
+      }
 
-  .glitch-image {
-    width: 300vw;
-  }
+      .white-container, .black-container {
+        height: 33vh;
+        width: 60vw;
+      }
 
-  .sixth-section {
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-  }
+      .extra {
+        display: none;
+      }
 
-  .rose {
-    width: 75vw; /* Еще больше увеличиваем розу для самых маленьких экранов */
-  }
+      .arrow-red, .arrow-black, .arrow-white {
+        width: 22vw;
+      }
+          
+      .text-overlay {
+        width: 90vw;
+        top: 45%;
+        height: 40vh;
+      }
+    
+      .design-school {
+        width: 65%;
+        margin-left: 2.5vw;
+        margin-bottom: 0;
+      }
+    
+      .line-wrapper {
+        display: none;
+      }
+    
+      .line-text {
+        font-size: 6.5vw;
+        margin-bottom: 0.7vh;
+      }
+    
+      .hand-mobile {
+        display: block;
+        width: 40%;
+        transform: none; /* Убираем трансформации */
+      }
+    
+      .hand-mobile:hover {
+        transform: translateX(30px);
+      }
+      .connecting-line {
+        height: 1.5px;
+        border: 0.5px solid #550202;
+      }
+      .hand  {
+        display: none;
+      }
+      
+      .seventh-section {
+        padding-bottom: 2vh;
+      }
 
-  .red-container {
-    width: 40vw;
-    height: 55vh;
-  }
 
-  .white-container,
-  .black-container {
-    height: 18vh;
-    width: 60vw;
-  }
 
-  .extra {
-    display: none;
-  }
-
-  .arrow-red,
-  .arrow-black,
-  .arrow-white {
-    width: 22vw;
-  }
-
-  .text-overlay {
-    width: 90vw;
-    top: 45%;
-    height: 40vh;
-  }
-
-  .design-school {
-    width: 65%;
-    margin-left: 2.5vw;
-    margin-bottom: 0;
-  }
-
-  .line-wrapper {
-    display: none;
-  }
-
-  .line-text {
-    font-size: 6.5vw;
-    margin-bottom: 0.7vh;
-  }
-
-  .hand-mobile {
-    display: block;
-    width: 40%;
-    transform: none; /* Убираем трансформации */
-  }
-
-  .hand-mobile:hover {
-    transform: translateX(30px);
-  }
-  .connecting-line {
-    height: 1.5px;
-    border: 0.5px solid #550202;
-  }
-  .hand {
-    display: none;
-  }
-
-  .seventh-section {
-    padding-bottom: 2vh;
-  }
 }

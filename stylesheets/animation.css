@@ -177,12 +177,14 @@
 }
 
 /* Анимация движения текста */
-@keyframes smooth-scroll {
+@keyframes scroll-left {
   0% {
-    transform: translateX(250%); /* Текст на исходной позиции */
+    transform: translateX(300%); /* Текст на исходной позиции */
+    visibility: visible;
   }
   100% {
-    transform: translateX(-120%); /* Текст полностью уходит за левый край */
+    transform: translateX(-300%); /* Текст полностью уходит за левый край */
+    visibility: visible;
   }
 }
 
@@ -212,10 +214,12 @@
 /* Анимация движения вправо */
 @keyframes moveArrowRight {
   0% {
-    transform: translateX(-100%); /* Начальная позиция */
+    transform: translateX(-400%); /* Начальная позиция */
+    visibility: visible;
   }
   100% {
-    transform: translateX(100%); /* Возвращение в исходное положение */
+    transform: translateX(400%); /* Возвращение в исходное положение */
+    visibility: visible;
   }
 }
 
@@ -223,10 +227,12 @@
 @keyframes moveArrow {
   0% {
     transform: translateY(500%); /* Начальная позиция */
+    visibility: visible;
   }
 
   100% {
     transform: translateY(-500%); /* Возвращается в исходное положение */
+    visibility: visible;
   }
 }
 
