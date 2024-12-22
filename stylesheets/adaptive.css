@@ -1,3 +1,20 @@
+@media (max-width: 800px) {
+
+  .first-block {
+    background-size: auto;
+  }
+
+  .animation-setka {
+    width: 160vw;
+    height: 34vh;
+  }
+
+  .frame {
+      left: 0;
+      max-width: 164vw;
+  }
+}
+
 
 /* Медиазапросы для адаптации */
 @media (max-width: 768px) {
@@ -14,15 +31,14 @@
     }
     
     .animation-setka {
-      width: 171vw;
-      height: 48vh;
+      width: 121vw;
+      height: 83vh;
     }
 
     .frame {
         left: 0;
-        max-width: 167vw;
+        max-width: 128vw;
     }
-
     .animation-red-setka {
       width: 171vw;
       height: 48vh;
@@ -36,6 +52,10 @@
     .first-section,
     .second-section {
         height: 50vh;
+    }
+
+    .third-section {
+      height: 70vh;
     }
 
     .hearts, .fourth-section {
@@ -204,7 +224,12 @@
     }
 
     .animation-setka {
-      height: 50vh;
+      height: 51vh;
+      width: 175vw;
+    }
+
+    .frame {
+      max-width: 179vw;
     }
 
     .first-section,
@@ -299,7 +324,7 @@
         top: 45%;
         height: 40vh;
       }
-    
+
       .design-school {
         width: 65%;
         margin-left: 2.5vw;
@@ -335,7 +360,139 @@
       .seventh-section {
         padding-bottom: 2vh;
       }
+}
+
+@media (max-width: 428px) {
+
+  .animation-setka {
+      width: 162vw;
+      height: 69vh;
+    }
+
+    .frame {
+      left: 0;
+      max-width: 169vw;
+    }
 
 
+    .seventh-section {
+      height: 18.5vh;
+    }
 
+}
+
+@media (max-width: 414px) {
+
+  .animation-setka {
+      width: 168vw;
+      height: 46vh;
+    }
+
+    .frame {
+      left: 0;
+      max-width: 171vw;
+    }
+
+
+    .seventh-section {
+      height: 16.5vh;
+    }
+
+}
+
+@media (max-width: 412px) {
+
+  .animation-setka {
+      width: 168vw;
+      height: 52vh;
+    }
+
+    .frame {
+      left: 0;
+      max-width: 171vw;
+    }
+
+
+    .seventh-section {
+      height: 16.5vh;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+  .animation-setka {
+      width: 168vw;
+      height: 53vh;
+    }
+
+    .frame {
+      left: 0;
+      max-width: 171vw;
+    }
+}
+
+@media (max-width: 393px) {
+
+  .animation-setka {
+      width: 153vw;
+      height: 52vh;
+    }
+
+    .frame {
+        left: 0;
+        max-width: 162vw;
+    }
+
+    .seventh-section {
+      height: 18.5vh;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+  .animation-setka {
+      width: 153vw;
+      height: 66vh;
+    }
+
+    .frame {
+        left: 0;
+        max-width: 162vw;
+    }
+
+    .seventh-section {
+      height: 18.5vh;
+    }
+
+
+}
+
+
+@media (max-width: 375px) {
+
+  .animation-setka {
+      width: 153vw;
+      height: 64vh;
+    }
+
+    .frame {
+        left: 0;
+        max-width: 162vw;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+  .animation-setka {
+      width: 157vw;
+      height: 52vh;
+    }
+
+    .frame {
+        left: 0;
+        max-width: 162vw;
+    }
 }
