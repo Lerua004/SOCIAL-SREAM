@@ -12,9 +12,9 @@
 }
 
 .frame:nth-child(1) {
-  animation-delay: 0s;
-}
-
+    animation-delay: 0s;
+  }
+  
 .frame:nth-child(2) {
   animation-delay: 0.7s;
 }
@@ -36,7 +36,7 @@
   animation-delay: 2.5s; /* Показывается после остальных */
   animation-fill-mode: forwards; /* Остаётся видимым после анимации */
 }
-
+  
 /* Анимация для всех кадров, кроме последнего */
 @keyframes fadeFrames {
   0% {
@@ -58,25 +58,26 @@
     opacity: 1; /* Остаётся видимым */
   }
 }
+  
 
 .red-frame:nth-child(1) {
   animation-delay: 0s;
 }
 
 .red-frame:nth-child(2) {
-  animation-delay: 0.2s;
+animation-delay: 0.2s;
 }
 
 .red-frame:nth-child(3) {
-  animation-delay: 0.4s;
+animation-delay: 0.4s;
 }
 
 .red-frame:nth-child(4) {
-  animation-delay: 0.6s;
+animation-delay: 0.6s;
 }
 
 .red-frame:nth-child(5) {
-  animation-delay: 0.8s;
+animation-delay: 0.8s;
 }
 
 .red-frame:nth-child(6) {
@@ -94,63 +95,60 @@
 .red-frame:nth-child(9) {
   animation-delay: 1.6s;
 }
-
+  
 .red-frame:nth-child(10) {
-  animation: fadeLastRedFrame 1.8s;
-  animation-delay: 1.8s; /* Показывается после остальных */
-  animation-fill-mode: forwards; /* Остаётся видимым после анимации */
+animation: fadeLastRedFrame 1.8s;
+animation-delay: 1.8s; /* Показывается после остальных */
+animation-fill-mode: forwards; /* Остаётся видимым после анимации */
 }
 
 /* Анимация для всех кадров, кроме последнего */
 @keyframes fadeRedFrames {
-  0% {
-    opacity: 1;
-  }
+0% {
+  opacity: 1;
+}
 
-  100% {
-    opacity: 0; /* Исчезновение */
-  }
+100% {
+  opacity: 0; /* Исчезновение */
+}
 }
 
 /* Анимация для последнего кадра */
 @keyframes fadeLastRedFrame {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1; /* Остаётся видимым */
-  }
+0% {
+  opacity: 0;
 }
+
+100% {
+  opacity: 1; /* Остаётся видимым */
+}
+}
+
+
 
 /* Анимация смены шрифта */
 @keyframes fontCycle {
-  0%,
-  20% {
+  0%, 20% {
     font-family: "RubikWetPaint";
     opacity: 1;
     transform: scale(1);
   }
-  20%,
-  40% {
+  20%, 40% {
     font-family: "RubikDoodleShadow";
     opacity: 1;
     transform: scale(1.1);
   }
-  40%,
-  60% {
+  40%, 60% {
     font-family: "InkFree";
     opacity: 1;
     transform: scale(1);
   }
-  60%,
-  80% {
+  60%, 80% {
     font-family: "OrelegaOne";
     opacity: 1;
     transform: scale(1.1);
   }
-  80%,
-  95% {
+  80%, 95% {
     font-family: "RubikBrokenFax";
     opacity: 1;
     transform: scale(1);
@@ -176,6 +174,7 @@
   }
 }
 
+
 /* Анимация движения текста */
 @keyframes scroll-left {
   0% {
@@ -185,19 +184,20 @@
   100% {
     transform: translateX(-300%); /* Текст полностью уходит за левый край */
     visibility: visible;
+
   }
 }
 
 /* Анимация смены изображений */
 @keyframes glitch-animation {
   0% {
-    content: url("../images/Glitch/1.png"); /* Первое изображение */
+    content: url('../images/Glitch/1.png'); /* Первое изображение */
   }
   50% {
-    content: url("../images/Glitch/1.2.png"); /* Второе изображение */
+    content: url('../images/Glitch/1.2.png'); /* Второе изображение */
   }
   100% {
-    content: url("../images/Glitch/1.png"); /* Возвращение к первому изображению */
+    content: url('../images/Glitch/1.png'); /* Возвращение к первому изображению */
   }
 }
 
@@ -243,5 +243,22 @@
 
   100% {
     transform: translateX(30px);
+
+  }
+}
+
+
+@keyframes chat_change {
+  0% {
+
+  }
+  25% {
+    content: url("../images/chat_hovered.png"); /* Замена изображения */
+    transform: scale(1.1); /* Небольшое увеличение */
+  }
+
+  100% {
+    content: url("../images/chat_hovered.png"); /* Замена изображения */
+    transform: scale(1.1); /* Небольшое увеличение */
   }
 }
