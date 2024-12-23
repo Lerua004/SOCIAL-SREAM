@@ -298,7 +298,7 @@ body {
   font-family: "RubikWetPaint", sans-serif;
   white-space: nowrap; /* не перенос текста на новую строку */
   overflow-x: visible;
-  animation: scroll-left 7s linear infinite;
+  animation: scroll-left 5s linear infinite;
   position: absolute;
   padding-right: 30vw;
   visibility: hidden;
