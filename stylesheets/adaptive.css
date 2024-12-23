@@ -14,7 +14,6 @@
   }
 }
 
-/* Медиазапросы для адаптации */
 @media (max-width: 768px) {
   .first-block {
     background-size: auto;

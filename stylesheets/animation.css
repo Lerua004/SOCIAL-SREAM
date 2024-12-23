@@ -157,7 +157,7 @@
   }
 }
 
-/* Анимация "дёргания" */
+/* Анимация дёргания */
 @keyframes jitter {
   0% {
     transform: translate(-50%, -50%) rotate(var(--angle)) translate(0, 0);
@@ -201,7 +201,7 @@
   }
 }
 
-/* Ключ кадры для аним вращения по кругу */
+/* Ключ кадры для аним вращ по кругу */
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -247,89 +247,89 @@
 }
 
 .arrow-black:nth-child(1) {
-  animation-delay: 0s; /* Без задержки */
+  animation-delay: 0s;
 }
 
 .arrow-black:nth-child(2) {
-  animation-delay: 0.5s; /* Задержка перед началом */
+  animation-delay: 0.5s;
 }
 
 .arrow-black:nth-child(3) {
-  animation-delay: 1s; /* Другая задержка */
+  animation-delay: 1s;
 }
 
 .arrow-black:nth-child(4) {
-  animation-delay: 1.5s; /* Другая задержка */
+  animation-delay: 1.5s;
 }
 
 .arrow-black:nth-child(5) {
-  animation-delay: 2s; /* Другая задержка */
+  animation-delay: 2s;
 }
 
 .arrow-black:nth-child(6) {
-  animation-delay: 2.5s; /* Другая задержка */
+  animation-delay: 2.5s;
 }
 
 .arrow-black:nth-child(7) {
-  animation-delay: 3s; /* Другая задержка */
+  animation-delay: 3s;
 }
 
 .arrow-black:nth-child(8) {
-  animation-delay: 3.5s; /* Другая задержка */
+  animation-delay: 3.5s;
 }
 
 .arrow-white:nth-child(1) {
-  animation-delay: 0s; /* Без задержки */
+  animation-delay: 0s;
 }
 
 .arrow-white:nth-child(2) {
-  animation-delay: 0.5s; /* Задержка перед началом */
+  animation-delay: 0.5s;
 }
 
 .arrow-white:nth-child(3) {
-  animation-delay: 1s; /* Другая задержка */
+  animation-delay: 1s;
 }
 
 .arrow-white:nth-child(4) {
-  animation-delay: 1.5s; /* Другая задержка */
+  animation-delay: 1.5s;
 }
 
 .arrow-white:nth-child(5) {
-  animation-delay: 2s; /* Другая задержка */
+  animation-delay: 2s;
 }
 
 .arrow-white:nth-child(6) {
-  animation-delay: 2.5s; /* Другая задержка */
+  animation-delay: 2.5s;
 }
 
 .arrow-white:nth-child(7) {
-  animation-delay: 3s; /* Другая задержка */
+  animation-delay: 3s;
 }
 
 .arrow-white:nth-child(8) {
-  animation-delay: 3.5s; /* Другая задержка */
+  animation-delay: 3.5s;
 }
 
 .do-not-disturb:nth-child(1) {
-  animation-delay: 0s; /* Без задержки */
+  animation-delay: 0s;
 }
 
 .do-not-disturb:nth-child(2) {
-  animation-delay: 1s; /* Задержка перед началом */
+  animation-delay: 1s;
 }
 
 .do-not-disturb:nth-child(3) {
-  animation-delay: 2s; /* Другая задержка */
+  animation-delay: 2s;
 }
 
 .do-not-disturb:nth-child(4) {
-  animation-delay: 3s; /* Другая задержка */
+  animation-delay: 3s;
 }
 
 .do-not-disturb:nth-child(5) {
-  animation-delay: 4s; /* Другая задержка */
+  animation-delay: 4s;
 }
 
 .do-not-disturb:nth-child(6) {
-  animation-delay: 5s; /* Другая задержка */
+  animation-delay: 5s;
 }

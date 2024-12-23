@@ -13,7 +13,7 @@ body {
 }
 
 .first-section {
-  position: relative; /*  элементы позиционировались внутри  */
+  position: relative;
   background-color: black;
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ body {
 
 /* Задний фон */
 .first-block {
-  position: absolute; /* Задний фон на весь экран */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -33,7 +33,7 @@ body {
   background-image: url("../images/Setka/setka.png");
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 4; /* Самый низкий уровень */
+  z-index: 4;
   animation: fadeInOut 20s;
 }
 
@@ -43,8 +43,8 @@ body {
   font-size: 10vw;
   font-family: "RubikWetPaint", sans-serif;
   text-align: center;
-  z-index: 3; /* Самый верхний уровень */
-  position: relative; /* Отн потока */
+  z-index: 3;
+  position: relative;
   overflow-x: visible;
 }
 
@@ -76,10 +76,10 @@ body {
 .animated-word-container {
   display: inline-block;
   position: relative;
-  width: 5em; /*  фикс ширина для "попался" */
-  height: 1em; /* Высота текста без изменений */
+  width: 5em;
+  height: 1em;
   overflow: hidden;
-  text-align: center; /* Центрировка слова*/
+  text-align: center;
   vertical-align: middle;
 }
 
@@ -144,7 +144,7 @@ body {
   opacity: 0;
   animation: fadeRedFrames 1.8s; /* Общ длительность 5 кадров * 0.5s */
   max-width: 215vh;
-  z-index: 15; /* Перекрывает элементы второго сектора */
+  z-index: 15;
 }
 
 .frame {
@@ -153,7 +153,7 @@ body {
   opacity: 0;
   animation: fadeFrames 2.5s;
   max-width: 168vh;
-  z-index: 15; /* Перекрывает элементы второго сектора */
+  z-index: 15;
 }
 
 .third-section {
@@ -175,9 +175,9 @@ body {
 /* Основной стиль для текста */
 .lines {
   font-size: clamp(7vw, 8.5vw, 12.2vw); /* Минимум 8.5vw, максимум 12.2vw */
-  letter-spacing: -1.2vw; /* Уменьш расстояния между символами */
+  letter-spacing: -1.2vw;
   text-align: center;
-  line-height: 0.8; /* Меньшее расстояние между строками */
+  line-height: 0.8;
   position: relative;
   overflow-x: visible;
 }
@@ -185,7 +185,7 @@ body {
 /* Стили тире */
 .dash {
   display: inline-block;
-  transition: opacity 0.3s ease; /* Плавные переходы */
+  transition: opacity 0.3s ease;
   color: black;
   font-size: 1em;
   position: relative;
@@ -213,17 +213,17 @@ body {
 }
 
 .dot:hover::before {
-  content: attr(data-word); /* Показываем слово */
+  content: attr(data-word);
   font-size: 0.4em;
   color: #aa0404;
   position: absolute;
   white-space: nowrap;
   left: 0;
   right: 0;
-  top: 50%; /*  текст по вертикали */
-  transform: translateY(-10%); /* Центрирование текста */
+  top: 50%;
+  transform: translateY(-10%);
   text-align: center;
-  z-index: 1; /* Ставим текст поверх */
+  z-index: 1;
   letter-spacing: 0.3vw;
   overflow-x: visible;
 }
@@ -246,7 +246,7 @@ body {
 }
 
 .hearts {
-  font-size: clamp(1.5rem, 2vw, 3rem); /* Адаптивный размер текста */
+  font-size: clamp(1.5rem, 2vw, 3rem);
   text-align: center;
   z-index: 2;
   position: relative;
@@ -259,8 +259,8 @@ body {
   transform: translate(-50%, -50%) rotate(var(--angle, 0deg));
   top: var(--y, 50%);
   left: var(--x, 50%);
-  animation: jitter 0.3s infinite; /* Анимация дёргания */
-  transition: transform 0.3s ease-out; /* Плавность */
+  animation: jitter 0.3s infinite;
+  transition: transform 0.3s ease-out;
 }
 
 /* Центральное изображение */
@@ -268,12 +268,12 @@ body {
   position: relative;
   z-index: 10;
   width: 20%;
-  transition: transform 0.3s, opacity 0.3s, background-image 0.3s; /* Плавная смена */
+  transition: transform 0.3s, opacity 0.3s, background-image 0.3s;
 }
 
 /* Замена изображения при наведении */
 .chat:hover {
-  content: url("../images/chat_hovered.png"); /* Замена изображения */
+  content: url("../images/chat_hovered.png");
   transform: scale(1.1);
 }
 
@@ -298,7 +298,7 @@ body {
   font-family: "RubikWetPaint", sans-serif;
   white-space: nowrap; /* не перенос текста на новую строку */
   overflow-x: visible;
-  animation: scroll-left 7s linear infinite; /* Анимация движения */
+  animation: scroll-left 7s linear infinite;
   position: absolute;
   padding-right: 30vw;
   visibility: hidden;
@@ -316,7 +316,7 @@ body {
 .glitch-image {
   width: 100vw;
   height: 100vh;
-  animation: glitch-animation 0.2s steps(1) infinite; /* Быстрое переключение */
+  animation: glitch-animation 0.2s steps(1) infinite;
   overflow-x: visible;
 }
 
@@ -341,7 +341,7 @@ body {
 .rose {
   position: relative;
   z-index: 2;
-  transition: transform 0.5s ease; /* Эффект увеличения розы при наведении */
+  transition: transform 0.5s ease;
 }
 
 /* Текст на заднем плане */
@@ -353,9 +353,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  pointer-events: none; /* Текст не мешает взаимодействию с изображением */
+  pointer-events: none;
   z-index: 1;
-  transition: opacity 1.5s ease; /* Плавное появление текста */
+  transition: opacity 1.5s ease;
 }
 
 /* Эффект при наведении */
@@ -449,11 +449,11 @@ body {
 /* Обёртка для полосы и текста */
 .line-wrapper {
   display: flex;
-  flex-direction: column; /* Текст над полосой */
+  flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  flex-grow: 1; /*  пространство между изображениями */
-  align-self: flex-end; /*  обёртка по низу */
+  flex-grow: 1;
+  align-self: flex-end;
   position: relative;
   transition: transform 0.6s ease-in-out;
   overflow-x: visible;
@@ -465,7 +465,7 @@ body {
   color: #aa0404;
   font-weight: 500;
   font-size: 4.5vw;
-  margin-bottom: 0.7vh; /* Расстояние от текста до полосы */
+  margin-bottom: 0.7vh;
   overflow-x: visible;
 }
 
@@ -476,7 +476,7 @@ body {
   width: 104%;
   border: 1.5px solid #550202;
   box-sizing: border-box;
-  transform: scaleX(1); /* Исходное состояние */
+  transform: scaleX(1);
   transform-origin: left;
   transition: transform 0.6s ease-in-out;
   overflow-x: visible;
@@ -486,14 +486,14 @@ body {
 .hand-mobile {
   display: none;
   transition: transform 0.6s ease-in-out;
-  transform-origin: center; /* Уст точку вращения/масштабирования */
+  transform-origin: center;
   cursor: pointer;
   overflow-x: visible;
 }
 
 .hand {
   transition: transform 0.6s ease-in-out;
-  transform-origin: center; /* Уст точку вращения/масштабирования */
+  transform-origin: center;
   cursor: pointer;
   overflow-x: visible;
   animation: moveHand 0.4s infinite linear alternate;
